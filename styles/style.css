@@ -382,6 +382,13 @@ footer {
   grid-area: d6;
   margin-left: 86px;
 }
+.best_feauture {
+  background-image: url("../img/Layer_9.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
 .copyright {
   font-family: "OpenSans";
   font-size: 13px;
