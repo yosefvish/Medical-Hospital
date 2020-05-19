@@ -1,0 +1,508 @@
+/***** RESET HTML ELEMENTS *****/
+@import "html5reset.css";
+
+@font-face {
+    font-family: "NexaBold";
+    src: url(../fonts/NexaBold.otf);
+}
+
+@font-face {
+    font-family: "OpenSans-Bold";
+    src: url(../fonts/OpenSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: "OpenSans-Regular";
+    src: url(../fonts/OpenSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url(../fonts/Lato-Regular.ttf);
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.out-line {
+    outline: 2px solid green;
+}
+
+.wrapper {
+    width: 1600px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 200px 1fr 116px;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+header {
+    grid-area: header;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container_header {
+    display: grid;
+    grid-template-columns: 420px 297px 231px 180px;
+    grid-template-rows: auto auto auto;
+    margin-top: 34px;
+}
+
+.blue_circle {
+    /* Style for "Ellipse 1" */
+    width: 51px;
+    height: 51px;
+    background-color: #1a9bdc;
+    border-radius: 50%;
+    float: left;
+}
+
+.fa-clock-o {
+    /* Style for "" */
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 400;
+    /* Text style for "," */
+    letter-spacing: 2.31px;
+    margin-left: 13px;
+    margin-top: 12px;
+}
+
+.fa-envelope {
+    /* Style for "" */
+    font-family: "Font Awesome";
+    color: #ffffff;
+    font-size: 23px;
+    font-weight: 400;
+    /* Text style for "," */
+    letter-spacing: 1.8px;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.fa-mobile {
+    /* Style for "" */
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 400;
+    /* Text style for "," */
+    letter-spacing: 3.09px;
+    margin-top: 8px;
+    margin-left: 16px;
+}
+
+.text_header {
+    font-family: "OpenSans-Regular", sans-serif;
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #6a6a6a;
+    float: left;
+    margin-left: 19px;
+}
+
+.text_header:nth-child(2) {
+    margin-left: 13px;
+}
+
+.bold_text_header {
+    font-family: "OpenSans-Bold, sans-serif";
+    font-weight: 700;
+}
+
+.border_bottom_header {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    border-bottom: 2px solid #c2c2c2;
+    margin: 20px 5px 33px;
+    opacity: 0.31;
+
+}
+
+.menu_header {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.menu-list {
+    list-style-type: none;
+    float: left;
+}
+
+.menu-link {
+    /* Style for "Home" */
+    color: #6c6c6c;
+    font-family: "NexaBold";
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+    margin-right: 27px;
+}
+
+.menu-link:hover {
+    color: #212121;
+    font-weight: 300;
+}
+
+.menu-link-active,
+.menu-link-active:hover {
+    color: #262626;
+    font-weight: 700;
+}
+
+.social_icon_header {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    text-align: right;
+    /* Style for "    " */
+    color: #191919;
+    font-size: 23px;
+    font-weight: 400;
+    letter-spacing: 1.8px;
+
+}
+
+.social_link {
+    margin-left: 27px;
+}
+
+.social_link:first-child {
+    margin-left: 0;
+}
+
+.social_link,
+.social_link:visited,
+.social_link:active,
+.socila_link:link,
+.social_link:hover {
+    color: #191919;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-column: footer;
+    background-color: #1a1a1a;
+}
+
+.main_banner {
+    background-image: url("../img/Layer_10.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.layer_main_banner {
+    opacity: 0.81;
+}
+
+.text_main_banner {
+    position: absolute;
+    top: 180px;
+    left: 250px;
+}
+
+.p_main_banner {
+    /* Style for "We have Be" */
+    width: 524px;
+    height: 104px;
+    color: #474747;
+    font-size: 48px;
+    font-weight: 500;
+    font-family: "OpenSans-Regular";
+    /* Text style for "We have Be" */
+    letter-spacing: -1.19px;
+    text-align: center;
+}
+
+.p_openSans_main_banner {
+    margin-top: 37px;
+    margin-left: 52px;
+    /* Style for "Sed ut per" */
+    width: 420px;
+    color: #3f3f3f;
+    font-family: "OpenSans-Regular";
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+}
+
+.btn_read_more {
+    margin-top: 42px;
+    margin-left: 179px;
+    width: 166px;
+    box-shadow: -4px 12px 40px rgba(0, 1, 1, 0.2);
+    background-color: #1a9bdc;
+    text-transform: uppercase;
+    border-radius: 23px;
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Lato";
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    /* Text style for "Read more" */
+    letter-spacing: 0.32px;
+    text-align: center;
+    padding: 17px 0;
+}
+
+.btn_read_more:hover {
+    box-shadow: none;
+}
+
+.best_doctor_copy {
+    position: absolute;
+    top: 539px;
+    left: 745px;
+}
+
+/***** services *****/
+.services {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 1fr;
+}
+
+.service_container {
+    height: 360px;
+}
+
+.service_content {
+    height: 100%;
+    text-align: center;
+}
+
+.service_1 {
+    background: #43b1d2;
+}
+
+.service_2 {
+    background-color: #3fb6c6;
+}
+
+.service_3 {
+    background-color: #3cbbbb;
+}
+
+.service_4 {
+    background-color: #37c3a8;
+}
+
+.back_icon {
+    height: 75px;
+    width: 75px;
+    background-color: #fff;
+    border-radius: 50%;
+    float: none;
+    display: block;
+    margin: auto;
+}
+
+.service_icon_img {
+    display: block;
+    margin: auto;
+    padding-top: 10px;
+}
+
+.service_icon_img:last-child {
+    padding-top: 14px;
+}
+
+.service_name {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    /* Text style for "B, est Tre" */
+    letter-spacing: -1.82px;
+    margin-top: 23px;
+    margin-bottom: 29px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.service_text {
+    /* Style for "Sed ut per" */
+    width: 264px;
+    color: #fff;
+    font-family: "OpenSans-Regular", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+/***** Why Choose Us ******/
+.why_choose_us {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template:
+        "d1 d1 d1"
+        "d2 d3 d4"
+        "d5 d3 d6";
+}
+
+.why_choose_caption {
+    grid-area: d1;
+    text-align: center;
+
+    h3 {
+        /* Style for "Why Choose" */
+        color: #494949;
+        font-size: 45px;
+        font-weight: 700;
+        margin-bottom: 31px;
+    }
+
+    p {
+        /* Style for "Sed ut per" */
+        width: 878px;
+        color: #6a6a6a;
+        font-family: "OpenSans-Regular", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 30px;
+    }
+}
+
+.choose_caption_content {
+    margin-top: 111px;
+    margin-bottom: 25px;
+}
+
+.back_icon_blue {
+    height: 75px;
+    width: 75px;
+    background-color: #1a9bdc;
+    border-radius: 50%;
+    float: left;
+    display: block;
+    margin-bottom: 20px;
+    margin-right: 19px;
+}
+
+.section_icon_img {
+    display: block;
+    margin: auto;
+    padding-top: 14px;
+}
+
+.section_1 {
+    grid-area: d2;
+    margin-top: 116px;
+    padding-right: 43px;
+}
+
+.section_name {
+    /* Style for "Profession" */
+    color: #6f6f6e;
+    font-size: 30px;
+    font-weight: 700;
+    /* Text style for "P, rofessi" */
+    letter-spacing: -1.82px;
+    margin-top: 27px;
+}
+
+.section_text {
+    /* Style for "Sed ut per" */
+    float: left;
+    width: 363px;
+    color: #6a6a6a;
+    font-family: "OpenSans-Regular", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.why_choose_img {
+    grid-area: d3;
+}
+
+.section_2 {
+    grid-area: d4;
+    margin-top: 116px;
+    margin-left: 86px;
+}
+
+.section_3 {
+    grid-area: d5;
+    padding-right: 43px;
+}
+
+.section_4 {
+    grid-area: d6;
+    margin-left: 86px;
+}
+
+
+.copyright {
+    font-family: "OpenSans";
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    color: #615555;
+    text-align: center;
+    padding-top: 55px;
+}
+
+@media (max-width:1200px) {
+    .wrapper {
+        width: 1200px;
+    }
+
+    .container {
+        width: 970px;
+    }
+
+    .container_header {
+        grid-template-columns: 230px 295px 235px;
+    }
+
+    .text_main_banner {
+        left: 50px;
+    }
+
+    .best_doctor_copy {
+        left: 545px;
+    }
+
+    .menu_header {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    .social_icon_header {
+        grid-column-start: 4;
+        grid-column-end: 5;
+    }
+
+    .social_link {
+        margin-left: 17px;
+    }
+}
