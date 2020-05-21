@@ -1,29 +1,10 @@
 /***** RESET HTML ELEMENTS *****/
 @import "html5reset.css";
 
-@font-face {
-    font-family: "NexaBold";
-    src: url(../fonts/NexaBold.otf);
-}
-
-@font-face {
-    font-family: "OpenSans-Bold";
-    src: url(../fonts/OpenSans-Bold.ttf);
-}
-
-@font-face {
-    font-family: "OpenSans-Regular";
-    src: url(../fonts/OpenSans-Regular.ttf);
-}
-
-@font-face {
-    font-family: "Lato";
-    src: url(../fonts/Lato-Regular.ttf);
-}
-
+@import "_variables";
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 .clearfix:after {
@@ -107,7 +88,7 @@ header {
 }
 
 .text_header {
-    font-family: "OpenSans-Regular", sans-serif;
+    font-family: @headerFont;
     font-size: 15px;
     line-height: 22px;
     font-weight: 400;
@@ -121,7 +102,7 @@ header {
 }
 
 .bold_text_header {
-    font-family: "OpenSans-Bold, sans-serif";
+    font-family: @headerFontBold;
     font-weight: 700;
 }
 
@@ -147,7 +128,7 @@ header {
 .menu-link {
     /* Style for "Home" */
     color: #6c6c6c;
-    font-family: "NexaBold";
+    font-family: "Nexa Bold", sans-serif;
     font-size: 20px;
     font-weight: 400;
     text-decoration: none;
@@ -222,12 +203,12 @@ footer {
 
 .p_main_banner {
     /* Style for "We have Be" */
-    width: 524px;
+    width: 547px;
     height: 104px;
     color: #474747;
     font-size: 48px;
     font-weight: 500;
-    font-family: "OpenSans-Regular";
+    font-family: "Montserrat Medium", sans-serif;
     /* Text style for "We have Be" */
     letter-spacing: -1.19px;
     text-align: center;
@@ -239,7 +220,7 @@ footer {
     /* Style for "Sed ut per" */
     width: 420px;
     color: #3f3f3f;
-    font-family: "OpenSans-Regular";
+    font-family: "Open Sans Regular", sans-serif;
     font-size: 17px;
     font-weight: 400;
     line-height: 30px;
@@ -257,7 +238,7 @@ footer {
     display: inline-block;
     text-decoration: none;
     color: #ffffff;
-    font-family: "Lato";
+    font-family: "Lato Regular", sans-serif;
     font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
@@ -332,6 +313,7 @@ footer {
 .service_name {
     color: #fff;
     font-size: 30px;
+    font-family: "Montserrat Bold", sans-serif;
     font-weight: 700;
     /* Text style for "B, est Tre" */
     letter-spacing: -1.82px;
@@ -350,10 +332,11 @@ footer {
     /* Style for "Sed ut per" */
     width: 264px;
     color: #fff;
-    font-family: "OpenSans-Regular", sans-serif;
+    font-family: "Open Sans Regular", sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 30px;
+    letter-spacing: 0;
 }
 
 /***** Why Choose Us ******/
@@ -375,6 +358,7 @@ footer {
         /* Style for "Why Choose" */
         color: #494949;
         font-size: 45px;
+        font-family: "Montserrat Bold", sans-serif;
         font-weight: 700;
         margin-bottom: 31px;
     }
@@ -383,7 +367,7 @@ footer {
         /* Style for "Sed ut per" */
         width: 878px;
         color: #6a6a6a;
-        font-family: "OpenSans-Regular", sans-serif;
+        font-family: "Open Sans Regular", sans-serif;
         font-size: 16px;
         font-weight: 400;
         line-height: 30px;
@@ -422,6 +406,7 @@ footer {
     /* Style for "Profession" */
     color: #6f6f6e;
     font-size: 30px;
+    font-family: "Montserrat Bold", sans-serif;
     font-weight: 700;
     /* Text style for "P, rofessi" */
     letter-spacing: -1.82px;
@@ -433,7 +418,7 @@ footer {
     float: left;
     width: 363px;
     color: #6a6a6a;
-    font-family: "OpenSans-Regular", sans-serif;
+    font-family: "Open Sans Regular", sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 30px;
@@ -490,8 +475,6 @@ footer {
 
 }
 
-.best_feauture_img {}
-
 .best_feauture_count {
     /* Style for "1000+" */
     color: #fff;
@@ -514,6 +497,7 @@ footer {
     /* Style for "Lung Repla" */
     color: #fff;
     font-size: 25px;
+    font-family: "Montserrat Medium", sans-serif;
     font-weight: 500;
     /* Text style for "L, ung , R" */
     letter-spacing: -1.52px;
@@ -521,9 +505,149 @@ footer {
     margin-top: 27px;
 }
 
+/***** textarea *****/
+.text_area {
+    display: grid;
+    grid-template-columns: 335px 335px auto;
+    grid-template-areas:
+        "works works creative"
+        "works_img1 works_img2 heart_open"
+        "works_details_1 works_details_2 heart_menu"
+        "works_btn works_btn ."
+    ;
+    grid-gap: 40px;
+    margin-top: 100px;
+
+}
+
+.works {
+    grid-area: works;
+}
+
+.works_caption,
+.creative_caption {
+    /* Style for "How we wor" */
+    color: #494949;
+    font-size: 45px;
+    font-family: "Montserrat Bold", sans-serif;
+    font-weight: 700;
+}
+
+.works_description,
+.creative_description {
+    /* Style for "Sed ut per" */
+    color: #6a6a6a;
+    font-family: "Open Sans Regular", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-top: 38px;
+}
+
+.creative {
+    grid-area: creative;
+}
+
+.works_img1 {
+    grid-area: works_img1;
+    width: 335px;
+    height: 210px;
+}
+
+.works_img2 {
+    grid-area: works_img2;
+    width: 335px;
+    height: 210px;
+}
+
+.heart_open {
+    grid-area: heart_open;
+
+}
+
+.heart_btn_active {
+    .heart-btn-mixin(#0087be, #fff)
+}
+
+.heart_text {
+    /* Style for "Sed ut per" */
+    margin-top: 19px;
+    color: #6a6a6a;
+    font-family: "Open Sans Regular", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.works_details_1 {
+    grid-area: works_details_1;
+    font-family: "Montserrat Medium", sans-serif;
+}
+
+.works_details_caption {
+    /* Style for "Lorem ipsu" */
+    width: 266px;
+    height: 20px;
+    color: #6f6f6e;
+    font-size: 20px;
+    font-weight: 500;
+    /* Text style for "L, orem ip" */
+    letter-spacing: -1.21px;
+    margin-bottom: 13px;
+}
+
+.works_details_date {
+    /* Style for "April 19," */
+    width: 203px;
+    height: 15px;
+    color: #0087be;
+    font-size: 15px;
+    font-weight: 500;
+    /* Text style for "April 19," */
+    letter-spacing: -0.38px;
+    margin-bottom: 27px;
+}
+
+.works_details_text {
+    /* Style for "Sed ut per" */
+    width: 321px;
+    height: 77px;
+    color: #6a6a6a;
+    font-family: "Open Sans Regular", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.works_details_2 {
+    grid-area: works_details_2;
+}
+
+.heart_menu {
+    grid-area: heart_menu;
+}
+
+.heart_btn {
+    .heart-btn-mixin(#e2e2e2, #494949);
+    margin-bottom: 12px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.works_btn {
+    grid-area: works_btn;
+    margin-bottom: 100px;
+}
+
+.works_btn_read_more {
+    .read_more_button-mixin(154px, 43px, 17px);
+
+}
 
 .copyright {
-    font-family: "OpenSans";
+    font-family: "Open Sans Regular", sans-serif;
     font-size: 13px;
     line-height: 24px;
     font-weight: 400;

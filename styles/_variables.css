@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "Nexa Bold";
+  src: url(../fonts/NexaBold.otf);
+}
+@font-face {
+  font-family: "Open Sans Bold";
+  src: url(../fonts/OpenSans-Bold.ttf);
+}
+@font-face {
+  font-family: "Open Sans Regular";
+  src: url(../fonts/OpenSans-Regular.ttf);
+}
+@font-face {
+  font-family: "Montserrat Regular";
+  src: url(../fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: "Montserrat Medium";
+  src: url(../fonts/Montserrat-Medium.ttf);
+}
+@font-face {
+  font-family: "Montserrat Bold";
+  src: url(../fonts/Montserrat-Bold.ttf);
+}
+@font-face {
+  font-family: "Lato Regular";
+  src: url(../fonts/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: "Lato Bold";
+  src: url(../fonts/Lato-Bold.ttf);
+}
+/*
+
+width: 166px;
+height: 47px;
+font-size: 18px;
+
+width: 154px;
+height: 43px;
+font-size: 17px;
+
+width: 192px;
+height: 54px;
+font-size: 21px;
+
+width: 125px;
+height: 35px;
+font-size: 14px;
+
+
+*/
