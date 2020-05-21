@@ -382,12 +382,57 @@ footer {
   grid-area: d6;
   margin-left: 86px;
 }
+/***** best_feauture *****/
 .best_feauture {
+  height: 592px;
   background-image: url("../img/Layer_9.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
+  opacity: 0.46;
+  background-color: #0087be;
+  opacity: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.best_feauture_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  width: 100%;
+}
+.best_feauture_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.best_feauture_count {
+  /* Style for "1000+" */
+  color: #fff;
+  font-size: 60px;
+  font-weight: 500;
+  /* Text style for "1, 000+" */
+  letter-spacing: -1.19px;
+  margin-top: 47px;
+}
+.best_feauture_divider {
+  /* Style for "Rectangle" */
+  width: 84px;
+  height: 6px;
+  background-color: #fff;
+  margin-top: 26px;
+}
+.best_feauture_text {
+  /* Style for "Lung Repla" */
+  color: #fff;
+  font-size: 25px;
+  font-weight: 500;
+  /* Text style for "L, ung , R" */
+  letter-spacing: -1.52px;
+  text-align: center;
+  margin-top: 27px;
 }
 .copyright {
   font-family: "OpenSans";
