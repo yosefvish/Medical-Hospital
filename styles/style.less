@@ -684,6 +684,101 @@ footer {
     }
 }
 
+/***** OUR TEAM *****/
+.our_team {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 84px;
+    grid-column-gap: 29px;
+    justify-items: center;
+    padding-bottom: 134px;
+}
+
+.our_team_caption {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    text-align: center;
+    /* Style for "Sed ut per" */
+
+    color: #6a6a6a;
+    font-family: "Open Sans Regular", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+
+    p {
+        /* Style for "Our Team" */
+        color: #494949;
+        font-family: "Montserrat Bold", sans-serif;
+        font-size: 45px;
+        font-weight: 700;
+        margin-top: 148px;
+        margin-bottom: 49px;
+    }
+}
+
+.team_section {
+    text-align: center;
+    font-family: "Montserrat Medium", sans-serif;
+    color: #6f6f6e;
+    font-weight: 500;
+}
+
+.team_section_name {
+    /* Style for "Dr Ricky D" */
+    margin-top: 29px;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+.team_job {
+    /* Style for "Assistant" */
+    font-size: 18px;
+    /* Text style for "A, ssistan" */
+    letter-spacing: -1.09px;
+}
+
+.team_socials {
+    margin-top: 32px;
+
+    a {
+        text-decoration: none;
+        color: #0087be;
+        font-size: 25px;
+        font-weight: 400;
+        letter-spacing: 1.8px;
+        margin: 0 5px;
+    }
+}
+
+/***** Quick action bar *****/
+.quick_action_bar {
+    background-color: #e2e2e2;
+    padding-top: 68px;
+    padding-bottom: 54px;
+}
+
+.quick_action_bar_container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.quick_action_bar_text {
+
+    float: left;
+    /* Style for "New Patien" */
+    color: #494949;
+    font-family: "Montserrat Bold", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.quick_action_bar_btn {
+    .read_more_button-mixin(192px, 54px, 21px);
+
+}
+
 
 .copyright {
     font-family: "Open Sans Regular", sans-serif;
