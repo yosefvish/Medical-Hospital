@@ -67,7 +67,7 @@ body {
   width: 1600px;
   margin: 0 auto;
   display: grid;
-  grid-template-rows: 200px 1fr 116px;
+  grid-template-rows: 200px 1fr auto;
   grid-template-areas: "header" "main" "footer";
 }
 header {
@@ -196,10 +196,6 @@ header {
 }
 main {
   grid-area: main;
-}
-footer {
-  grid-column: footer;
-  background-color: #1a1a1a;
 }
 .main_banner {
   background-image: url("../img/Layer_10.png");
@@ -754,7 +750,135 @@ footer {
   box-shadow: none;
   cursor: pointer;
 }
+/***** footer *****/
+footer {
+  grid-column: footer;
+  background-color: #171717;
+}
+.footer_contacts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  padding: 118px 0 108px;
+}
+.footer_caption {
+  /* Style for "Get in Tou" */
+  color: #fff;
+  font-family: "Open Sans Regular", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 24px;
+  /* Text style for "G, et in T" */
+  letter-spacing: 0.55px;
+  margin-bottom: 70px;
+}
+.get_touch_mail,
+.get_touch_phone,
+.get_touch_map {
+  opacity: 0.51;
+  color: #fff;
+  font-family: "Open Sans Regular", sans-serif;
+  font-weight: 400;
+  line-height: 24px;
+  box-sizing: border-box;
+  padding-left: 83px;
+  letter-spacing: 0.42px;
+  font-size: 17px;
+}
+.get_touch_mail {
+  background: url(../img/Icon_Mail.png) no-repeat left center;
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+.get_touch_phone {
+  background: url(../img/Icon_Phone.png) no-repeat left center;
+  margin-bottom: 63px;
+}
+.get_touch_map {
+  background: url(../img/Icon_Map.png) no-repeat left center;
+}
+.footer_links_menu a {
+  display: block;
+  margin-bottom: 20px;
+  text-decoration: none;
+  padding-left: 15px;
+  box-sizing: border-box;
+  /* Style for "About us" */
+  opacity: 0.51;
+  color: #fff;
+  font-family: "Open Sans Regular", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+}
+.footer_links_menu a:hover {
+  color: #0087be;
+}
+.footer_links_menu .fa-caret-right {
+  color: #0087be;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 19.04px;
+  letter-spacing: 1.8px;
+  margin-right: 21px;
+}
+.enquiry_form {
+  /* Style for "Name   Pho" */
+  width: 231px;
+  color: #fff;
+  font-family: "Open Sans Regular", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  /* Text style for "N, ame ," */
+  letter-spacing: 0.4px;
+}
+.enquiry_form textarea {
+  font-family: inherit;
+  height: 100px;
+}
+.enquiry_form input[type="text"],
+.enquiry_form textarea {
+  color: #fff;
+  outline: none;
+  border: 0;
+  margin-bottom: 20px;
+  background-color: #171717;
+  width: 231px;
+  border-bottom: 1px solid rgba(194, 194, 194, 0.42);
+}
+.enquiry_form input[type="submit"] {
+  width: 125px;
+  height: 35px;
+  font-size: 14px;
+  box-shadow: -4px 12px 40px rgba(0, 1, 1, 0.2);
+  background-color: #0087be;
+  color: #fff;
+  font-family: "Lato Bold", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.32px;
+  border: none;
+  border-radius: 30px;
+  text-align: center;
+}
+.enquiry_form input[type="submit"]:hover {
+  box-shadow: none;
+  cursor: pointer;
+}
+.socials_footer {
+  padding-top: 61px;
+  text-align: left;
+}
+.socials_footer a {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 400;
+  /* Text style for ",     , " */
+  letter-spacing: 1.8px;
+  padding-right: 15px;
+}
 .copyright {
+  background-color: #1a1a1a;
   font-family: "Open Sans Regular", sans-serif;
   font-size: 13px;
   line-height: 24px;
