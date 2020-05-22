@@ -835,6 +835,7 @@ footer {
 .enquiry_form textarea {
   font-family: inherit;
   height: 100px;
+  resize: none;
 }
 .enquiry_form input[type="text"],
 .enquiry_form textarea {
