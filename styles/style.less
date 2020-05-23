@@ -17,6 +17,12 @@ body {
     outline: 2px solid green;
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .wrapper {
     max-width: 1600px;
     margin: 0 auto;
@@ -42,7 +48,7 @@ body {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    @media (max-width: 761px) {
+    @media (max-width: 768px) {
         grid-template-columns: repeat(2, 1fr);
         padding: 0 20px;
     }
@@ -60,7 +66,7 @@ body {
         padding-bottom: 10px;
     }
 
-    @media (max-width: 761px) {
+    @media (max-width: 768px) {
         grid-column-end: 3;
     }
 }
@@ -79,9 +85,10 @@ body {
 .call_us_header {
     padding-left: 20px;
 
-    @media (max-width: 761px) {
+    @media (max-width: 768px) {
         grid-column-start: 1;
         padding: 10px;
+        justify-content: flex-start !important;
     }
 }
 
@@ -274,7 +281,7 @@ body {
         width: 80%;
     }
 
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
         width: 100%;
         //padding: 20px;
         //margin: 20px;
@@ -294,7 +301,7 @@ body {
     letter-spacing: -1.19px;
     text-align: center;
 
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
         width: 100%;
         //color: #0087be;
     }
@@ -313,7 +320,7 @@ body {
     line-height: 30px;
     text-align: center;
 
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
         width: 100%;
         //color: #0087be;
     }
@@ -322,7 +329,7 @@ body {
 .banner_btn {
     width: 80%;
 
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
         width: 100%;
     }
 }
@@ -408,16 +415,9 @@ body {
     margin-bottom: 29px;
 }
 
-.center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
 .service_text {
     /* Style for "Sed ut per" */
-    width: 264px;
+    width: 90%;
     color: #fff;
     font-family: "Open Sans Regular", sans-serif;
     font-size: 16px;
@@ -428,17 +428,12 @@ body {
 
 /***** Why Choose Us ******/
 .why_choose_us {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template:
-        "d1 d1 d1"
-        "d2 d3 d4"
-        "d5 d3 d6";
+    @media (max-width: 1200px) {
+        padding: 0 20px;
+    }
 }
 
 .why_choose_caption {
-    grid-area: d1;
     text-align: center;
 
     h3 {
@@ -452,7 +447,6 @@ body {
 
     p {
         /* Style for "Sed ut per" */
-        width: 878px;
         color: #6a6a6a;
         font-family: "Open Sans Regular", sans-serif;
         font-size: 16px;
@@ -464,6 +458,37 @@ body {
 .choose_caption_content {
     margin-top: 111px;
     margin-bottom: 25px;
+
+    @media (max-width: 768px) {
+        margin: 25px;
+    }
+}
+
+.why_choose_sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    grid-template:
+        "section_1 why_choose_img section_2"
+        "section_3 why_choose_img section_4";
+
+    @media (max-width: 992px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template:
+            "section_1 why_choose_img"
+            "section_2 why_choose_img"
+            "section_3 section_4";
+    }
+
+    @media (max-width: 787px) {
+        grid-template-columns: 1fr;
+        grid-template:
+            "why_choose_img"
+            "section_1"
+            "section_2"
+            "section_3"
+            "section_4";
+    }
 }
 
 .back_icon_blue {
@@ -484,9 +509,11 @@ body {
 }
 
 .section_1 {
-    grid-area: d2;
     margin-top: 116px;
-    padding-right: 43px;
+
+    @media (max-width: 991px) {
+        margin-top: 0;
+    }
 }
 
 .section_name {
@@ -503,7 +530,6 @@ body {
 .section_text {
     /* Style for "Sed ut per" */
     float: left;
-    width: 363px;
     color: #6a6a6a;
     font-family: "Open Sans Regular", sans-serif;
     font-size: 16px;
@@ -512,23 +538,23 @@ body {
 }
 
 .why_choose_img {
-    grid-area: d3;
+    grid-area: why_choose_img;
 }
 
 .section_2 {
-    grid-area: d4;
     margin-top: 116px;
-    margin-left: 86px;
+
+    @media (max-width: 992px) {
+        margin-left: 0;
+        margin-top: 0;
+    }
 }
 
+.section_1,
 .section_3 {
-    grid-area: d5;
-    padding-right: 43px;
-}
-
-.section_4 {
-    grid-area: d6;
-    margin-left: 86px;
+    @media (max-width: 992px) {
+        padding-right: 0;
+    }
 }
 
 /***** best_feauture *****/
@@ -549,13 +575,11 @@ body {
     @media (max-width: 991px) {
         padding: 20px 0;
     }
-
 }
 
 .best_feauture_container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    //grid-template-rows: auto;
     width: 100%;
 
     @media (max-width: 991px) {
@@ -573,7 +597,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 .best_feauture_count {
@@ -626,7 +649,6 @@ body {
     ;
     grid-gap: 40px;
     margin-top: 100px;
-
 }
 
 .works {
@@ -769,7 +791,7 @@ body {
         padding: 20px;
     }
 
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
         padding: 20px 10px;
     }
 }
@@ -850,7 +872,7 @@ body {
     grid-column-gap: 29px;
     justify-items: center;
 
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
         grid-template-columns: repeat(2, 1fr);
         grid-row-gap: 20px;
         grid-column-gap: 0;

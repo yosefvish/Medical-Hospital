@@ -63,6 +63,11 @@ body {
 .out-line {
   outline: 2px solid green;
 }
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .wrapper {
   max-width: 1600px;
   margin: 0 auto;
@@ -88,7 +93,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media (max-width: 761px) {
+@media (max-width: 768px) {
   .container_header {
     grid-template-columns: repeat(2, 1fr);
     padding: 0 20px;
@@ -106,7 +111,7 @@ body {
     padding-bottom: 10px;
   }
 }
-@media (max-width: 761px) {
+@media (max-width: 768px) {
   .logo {
     grid-column-end: 3;
   }
@@ -123,13 +128,14 @@ body {
 .call_us_header {
   padding-left: 20px;
 }
-@media (max-width: 761px) {
+@media (max-width: 768px) {
   .logo,
   .work_time_header,
   .mail_us_header,
   .call_us_header {
     grid-column-start: 1;
     padding: 10px;
+    justify-content: flex-start !important;
   }
 }
 .blue_circle {
@@ -302,7 +308,7 @@ body {
     width: 80%;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .text_main_banner {
     width: 100%;
   }
@@ -318,7 +324,7 @@ body {
   letter-spacing: -1.19px;
   text-align: center;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .p_main_banner {
     width: 100%;
   }
@@ -334,7 +340,7 @@ body {
   line-height: 30px;
   text-align: center;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .p_openSans_main_banner {
     width: 100%;
   }
@@ -342,7 +348,7 @@ body {
 .banner_btn {
   width: 80%;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .banner_btn {
     width: 100%;
   }
@@ -433,14 +439,9 @@ body {
   margin-top: 23px;
   margin-bottom: 29px;
 }
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .service_text {
   /* Style for "Sed ut per" */
-  width: 264px;
+  width: 90%;
   color: #fff;
   font-family: "Open Sans Regular", sans-serif;
   font-size: 16px;
@@ -449,14 +450,12 @@ body {
   letter-spacing: 0;
 }
 /***** Why Choose Us ******/
-.why_choose_us {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template: "d1 d1 d1" "d2 d3 d4" "d5 d3 d6";
+@media (max-width: 1200px) {
+  .why_choose_us {
+    padding: 0 20px;
+  }
 }
 .why_choose_caption {
-  grid-area: d1;
   text-align: center;
 }
 .why_choose_caption h3 {
@@ -469,7 +468,6 @@ body {
 }
 .why_choose_caption p {
   /* Style for "Sed ut per" */
-  width: 878px;
   color: #6a6a6a;
   font-family: "Open Sans Regular", sans-serif;
   font-size: 16px;
@@ -479,6 +477,29 @@ body {
 .choose_caption_content {
   margin-top: 111px;
   margin-bottom: 25px;
+}
+@media (max-width: 768px) {
+  .choose_caption_content {
+    margin: 25px;
+  }
+}
+.why_choose_sections {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  grid-template: "section_1 why_choose_img section_2" "section_3 why_choose_img section_4";
+}
+@media (max-width: 992px) {
+  .why_choose_sections {
+    grid-template-columns: 1fr 1fr;
+    grid-template: "section_1 why_choose_img" "section_2 why_choose_img" "section_3 section_4";
+  }
+}
+@media (max-width: 787px) {
+  .why_choose_sections {
+    grid-template-columns: 1fr;
+    grid-template: "why_choose_img" "section_1" "section_2" "section_3" "section_4";
+  }
 }
 .back_icon_blue {
   height: 75px;
@@ -496,9 +517,12 @@ body {
   padding-top: 14px;
 }
 .section_1 {
-  grid-area: d2;
   margin-top: 116px;
-  padding-right: 43px;
+}
+@media (max-width: 991px) {
+  .section_1 {
+    margin-top: 0;
+  }
 }
 .section_name {
   /* Style for "Profession" */
@@ -513,7 +537,6 @@ body {
 .section_text {
   /* Style for "Sed ut per" */
   float: left;
-  width: 363px;
   color: #6a6a6a;
   font-family: "Open Sans Regular", sans-serif;
   font-size: 16px;
@@ -521,20 +544,22 @@ body {
   line-height: 30px;
 }
 .why_choose_img {
-  grid-area: d3;
+  grid-area: why_choose_img;
 }
 .section_2 {
-  grid-area: d4;
   margin-top: 116px;
-  margin-left: 86px;
 }
-.section_3 {
-  grid-area: d5;
-  padding-right: 43px;
+@media (max-width: 992px) {
+  .section_2 {
+    margin-left: 0;
+    margin-top: 0;
+  }
 }
-.section_4 {
-  grid-area: d6;
-  margin-left: 86px;
+@media (max-width: 992px) {
+  .section_1,
+  .section_3 {
+    padding-right: 0;
+  }
 }
 /***** best_feauture *****/
 .best_feauture {
@@ -778,7 +803,7 @@ body {
     padding: 20px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .gallery_container {
     padding: 20px 10px;
   }
@@ -853,7 +878,7 @@ body {
   grid-column-gap: 29px;
   justify-items: center;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .our_team_profiles {
     grid-template-columns: repeat(2, 1fr);
     grid-row-gap: 20px;
