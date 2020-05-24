@@ -874,54 +874,18 @@ i:hover {
   grid-row-gap: 37px;
   grid-column-gap: 34px;
   justify-items: center;
-  /*
-    img:hover {
-        transform: rotateY(150deg);
-        //backface-visibility: hidden;
-    } */
 }
 .gallery_images img {
   width: 100%;
+  transition-duration: 2s;
 }
-.gallery_images .rotate_img {
-  width: 100%;
-  height: 100%;
-}
-.gallery_images .card {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  perspective: 1000px;
-}
-.gallery_images .front,
-.gallery_images .back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  transition: 2s;
-  backface-visibility: hidden;
-  background-color: #61C5B3;
-}
-.gallery_images .front img {
-  max-width: 100%;
-  min-width: 100%;
-  height: auto;
-}
-.gallery_images .back {
+.gallery_images img:hover {
   transform: rotateY(180deg);
-}
-.gallery_images .card:hover .front {
-  transform: rotateY(180deg);
-}
-.gallery_images .card:hover .back {
-  transform: rotateY(360deg);
 }
 @media (max-width: 991px) {
   .gallery_images {
     grid-template-columns: repeat(2, 1fr);
-    grid-row-gap: 25px;
+    grid-gap: 25px;
   }
 }
 @media (max-width: 576px) {
@@ -1067,7 +1031,41 @@ footer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
+  grid-template-areas: "get_touch quick_links our_sevices enquiry";
   padding: 118px 0 108px;
+}
+@media (max-width: 1200px) {
+  .footer_contacts {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media (max-width: 991px) {
+  .footer_contacts {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    grid-template-areas: "quick_links our_sevices" "get_touch enquiry";
+    justify-items: start;
+    padding: 30px;
+  }
+}
+@media (max-width: 576px) {
+  .footer_contacts {
+    grid-template-columns: 1fr;
+    grid-template-areas: "quick_links" "our_sevices" "get_touch" "enquiry";
+  }
+}
+.get_touch {
+  grid-area: get_touch;
+}
+.quick_links {
+  grid-area: quick_links;
+}
+.our_sevices {
+  grid-area: our_sevices;
+}
+.enquiry {
+  grid-area: enquiry;
 }
 .footer_caption {
   /* Style for "Get in Tou" */
@@ -1079,6 +1077,11 @@ footer {
   /* Text style for "G, et in T" */
   letter-spacing: 0.55px;
   margin-bottom: 70px;
+}
+@media (max-width: 991px) {
+  .footer_caption {
+    margin-bottom: 20px;
+  }
 }
 .get_touch_mail,
 .get_touch_phone,
@@ -1152,7 +1155,8 @@ footer {
   border: 0;
   margin-bottom: 20px;
   background-color: #171717;
-  width: 231px;
+  min-width: 231px;
+  width: 100%;
   border-bottom: 1px solid rgba(194, 194, 194, 0.42);
 }
 .enquiry_form input[type="submit"] {
@@ -1174,6 +1178,11 @@ footer {
 .enquiry_form input[type="submit"]:hover {
   box-shadow: none;
   cursor: pointer;
+}
+@media (max-width: 576px) {
+  .enquiry_form {
+    width: 100%;
+  }
 }
 .socials_footer {
   padding-top: 61px;

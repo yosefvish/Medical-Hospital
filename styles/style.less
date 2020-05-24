@@ -872,69 +872,24 @@ i:hover {
     grid-column-gap: 34px;
     justify-items: center;
 
-
     img {
         width: 100%;
-        //transition-duration: 2s;
+        transition-duration: 2s;
     }
 
-    .rotate_img {
-        width: 100%;
-        height: 100%;
-    }
-
-    .card {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        perspective: 1000px;
-    }
-
-    .front,
-    .back {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
-        transition: 2s;
-        backface-visibility: hidden;
-        background-color: #61C5B3;
-    }
-
-    .front img {
-        max-width: 100%;
-        min-width: 100%;
-        height: auto;
-    }
-
-    .back {
-        transform: rotateY(180deg);
-    }
-
-    .card:hover .front {
-        transform: rotateY(180deg);
-    }
-
-    .card:hover .back {
-        transform: rotateY(360deg);
-    }
-
-    /*
     img:hover {
-        transform: rotateY(150deg);
+        transform: rotateY(180deg);
         //backface-visibility: hidden;
-    } */
+    }
 
     @media (max-width: 991px) {
         grid-template-columns: repeat(2, 1fr);
-        grid-row-gap: 25px;
+        grid-gap: 25px;
     }
 
     @media (max-width: 576px) {
         grid-template-columns: 1fr;
     }
-
 }
 
 /***** OUR TEAM *****/
@@ -988,7 +943,6 @@ i:hover {
     font-family: "Montserrat Medium", sans-serif;
     color: #6f6f6e;
     font-weight: 500;
-
 }
 
 .team_section_img {
@@ -1071,7 +1025,52 @@ footer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
+    grid-template-areas:
+        "get_touch quick_links our_sevices enquiry"
+    ;
     padding: 118px 0 108px;
+
+    @media (max-width: 1200px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    @media (max-width: 991px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+        grid-template-areas:
+            "quick_links our_sevices"
+            "get_touch enquiry"
+        ;
+        justify-items: start;
+        padding: 30px;
+    }
+
+    @media (max-width: 576px) {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "quick_links"
+            "our_sevices"
+            "get_touch"
+            "enquiry"
+        ;
+    }
+}
+
+.get_touch {
+    grid-area: get_touch;
+}
+
+.quick_links {
+    grid-area: quick_links;
+}
+
+.our_sevices {
+    grid-area: our_sevices;
+}
+
+.enquiry {
+    grid-area: enquiry;
 }
 
 .footer_caption {
@@ -1084,6 +1083,10 @@ footer {
     /* Text style for "G, et in T" */
     letter-spacing: 0.55px;
     margin-bottom: 70px;
+
+    @media (max-width: 991px) {
+        margin-bottom: 20px;
+    }
 }
 
 .get_touch_mail,
@@ -1170,12 +1173,17 @@ footer {
         border: 0;
         margin-bottom: 20px;
         background-color: #171717;
-        width: 231px;
+        min-width: 231px;
+        width: 100%;
         border-bottom: 1px solid rgba(194, 194, 194, 0.42);
     }
 
     input[type="submit"] {
         .read_more_button-mixin(125px, 35px, 14px);
+    }
+
+    @media (max-width: 576px) {
+        width: 100%;
     }
 }
 
